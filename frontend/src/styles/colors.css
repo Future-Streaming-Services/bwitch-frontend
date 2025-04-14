@@ -1,0 +1,13 @@
+:root {
+    --accentBlue: #29ABE2; /* Example accent blue */
+    --accentGreen: #8FBC8F; /* Example accent green */
+    --primaryText: #333;
+    --secondaryText: #777;
+    --inputBackground: rgba(255, 255, 255, 0.7); /* Slightly transparent white for glass effect */
+    --inputBorder: #ccc;
+    --buttonPrimary: #007bff; /* Example primary button color */
+    --buttonPrimaryHover: #0056b3;
+    --buttonGoogle: #DB4437; /* Example Google button color */
+    --buttonGoogleHover: #C53929;
+    --borderRadius: 10px; /* General border radius for elements */
+  }
