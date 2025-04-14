@@ -1,0 +1,130 @@
+/* Navbar.css */
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-left .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .navbar-center {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar-center .nav-item {
+    position: relative;
+    margin: 0 10px;
+  }
+  
+  .navbar-center .nav-item-capsule {
+    border-radius: 20px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
+  }
+  
+  .navbar-center .nav-item-capsule > a,
+  .navbar-center .nav-item-capsule > span {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: block;
+  }
+  
+  .navbar-center .nav-item:hover .nav-item-capsule {
+    background-color: #e9ecef;
+    color: #007bff;
+  }
+  
+  .navbar-center .nav-item.active .nav-item-capsule {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .navbar-center .nav-item .dropdown-sheet {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 10;
+    white-space: nowrap;
+  }
+  
+  .navbar-center .nav-item .dropdown-sheet ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-center .nav-item .dropdown-sheet ul li {
+    margin-bottom: 8px;
+  }
+  
+  .navbar-center .nav-item .dropdown-sheet ul li a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 5px 15px;
+  }
+  
+  .navbar-center .nav-item .dropdown-sheet ul li a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Style the right side buttons to look like tabs */
+  .navbar-right {
+    display: flex;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+  
+  .navbar-right button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Capsule shape */
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Added transitions */
+  }
+  
+  .navbar-right .login-button {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  
+  .navbar-right .signup-button {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff; /* Optional: Add a border */
+  }
+  
+  .navbar-right .login-button:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+    border-color: #007bff; /* Optional: Change border color on hover */
+  }
+  
+  .navbar-right .signup-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3; /* Optional: Change border color on hover */
+  }
