@@ -19,27 +19,9 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* Features Section */}
-            <section className="features-section">
-                <h2>Why Choose Our Platform?</h2>
-                <div className="features-grid">
-                    <div className="feature-card">
-                        <div className="feature-icon">🎥</div>
-                        <h3>High Quality Streaming</h3>
-                        <p>Enjoy crystal clear video quality with our advanced streaming technology.</p>
-                    </div>
-                    <div className="feature-card">
-                        <div className="feature-icon">📱</div>
-                        <h3>Cross-Platform</h3>
-                        <p>Watch your favorite content on any device, anywhere, anytime.</p>
-                    </div>
-                    <div className="feature-card">
-                        <div className="feature-icon">🔒</div>
-                        <h3>Secure & Private</h3>
-                        <p>Your content is protected with industry-leading security measures.</p>
-                    </div>
-                </div>
-            </section>
+           
+
+            
 
             {/* Call to Action Section */}
             <section className="cta-section">

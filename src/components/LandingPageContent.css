@@ -70,15 +70,60 @@
   transform: translateY(-2px);
 }
 
+/* Video Tools Banner Section */
+.video-tools-banner {
+  width: 100%;
+  height: 200px;
+  background-color: #f5f5f5;
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-content {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  color: #000000DE;
+}
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.demo-button {
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.demo-button:hover {
+  background-color: #0056b3;
+}
+
 /* Brands Section */
 .brands-section {
   padding: 60px 20px;
   text-align: center;
+  background-color: #f8f9fa;
 }
 
 .brands-section h2 {
   font-size: 2rem;
-  color: #333;
+  color: #000000DE;
   margin-bottom: 40px;
   font-weight: 700;
 }
@@ -102,12 +147,12 @@
 
 .brands-carousel::before {
   left: 0;
-  background: linear-gradient(to right, white, transparent);
+  background: linear-gradient(to right, #f8f9fa, transparent);
 }
 
 .brands-carousel::after {
   right: 0;
-  background: linear-gradient(to left, white, transparent);
+  background: linear-gradient(to left, #f8f9fa, transparent);
 }
 
 .brands-track {
@@ -145,6 +190,99 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* Core Features Section */
+.core-features-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.core-features-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #000000DE;
+}
+
+.main-feature-card {
+  display: flex;
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 600px;
+}
+
+.main-card-image {
+  flex: 1;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+}
+
+.main-card-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-card-content h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000DE;
+}
+
+.main-card-content p {
+  font-size: 1.2rem;
+  color: #000000DE;
+  line-height: 1.6;
+}
+
+.feature-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card-image {
+  height: 250px;
+}
+
+.feature-card-content {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #000000DE;
+}
+
+.feature-card-content p {
+  color: #000000DE;
+  line-height: 1.5;
 }
 
 /* Sign Up Dialog */
@@ -216,4 +354,34 @@
 
 .signup-button:hover {
   background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .main-feature-card {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .main-card-image {
+    height: 300px;
+  }
+  
+  .feature-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .banner-content h2 {
+    font-size: 2rem;
+  }
 } 
