@@ -15,11 +15,10 @@ import {
   FaWordpress,
   FaLink,
   FaVimeoV,
-  
   FaShieldAlt,
   FaPlay,
   FaChartLine,
-    FaShareAlt,
+  FaShareAlt,
   FaCog,
   FaBroadcastTower,
   FaCompress,
@@ -31,6 +30,7 @@ import {
   FaExchangeAlt,
   FaVideo,
   FaChartBar,
+  FaCloud,
 } from 'react-icons/fa'; // Import relevant icons
 
 interface NavItem {
@@ -40,7 +40,6 @@ interface NavItem {
 }
 
 interface DropdownColumn {
-  title?: string;
   items: DropdownItem[];
   isMoreColumn?: boolean;
 }
@@ -60,48 +59,13 @@ const Navbar: React.FC = () => {
       label: 'Products',
       items: [
         {
-          title: 'Video',
           items: [
-            { label: 'Overview', subtitle: 'Simplified video hosting', icon: FaPlayCircle, link: '/products/video/overview' },
-            { label: 'Video Library', subtitle: 'Easy video management', icon: FaPlayCircle, link: '/products/video/library' },
-            { label: 'Video Protection', subtitle: 'Secure video streaming', icon: FaShieldAlt, link: '/products/video/protection' },
-            { label: 'Video Player', subtitle: 'Customization and branding', icon: FaPlay, link: '/products/video/player' },
-            { label: 'Video Marketing', subtitle: 'Thumbnails & CTAs', icon: FaChartLine, link: '/products/video/marketing' },
-            { label: 'Auto Subtitles', subtitle: 'AI-powered transcripts', icon: FaVimeoV, link: '/products/video/subtitles' },
-            { label: 'Video Publishing', subtitle: 'Embed and share videos', icon: FaShareAlt, link: '/products/video/publishing' },
-            { label: 'Video Settings', subtitle: 'Set up your videos', icon: FaCog, link: '/products/video/settings' },
-            { label: 'RTMP Live Streaming', subtitle: 'Live in seconds', icon: FaBroadcastTower, link: '/products/video/live' },
-          ],
-        },
-        {
-          title: 'Image',
-          items: [
-            { label: 'Overview', subtitle: 'Image optimization', icon: FaImage, link: '/products/image/overview' },
-            { label: 'Image Compression', subtitle: 'Compress image size', icon: FaCompress, link: '/products/image/compression' },
-            { label: 'Responsive Resize', subtitle: 'Resize for devices', icon: FaArrowsAltH, link: '/products/image/resize' },
-            { label: 'Format Conversion', subtitle: 'Latest image formats', icon: FaFileImage, link: '/products/image/conversion' },
-            { label: 'Image Operations', subtitle: 'Auto image editing', icon: FaMagic, link: '/products/image/operations' },
-            { label: 'Easy Integration', subtitle: 'Setup in no time', icon: FaPuzzlePiece, link: '/products/image/integration' },
-          ],
-        },
-        {
-          title: 'Video API',
-          items: [
-            { label: 'Overview', icon: FaCode, link: '/products/api/overview' },
-            { label: 'Dual DRM', icon: FaLock, link: '/products/api/drm' },
-            { label: 'Video Transcoding', icon: FaExchangeAlt, link: '/products/api/transcoding' },
-            { label: 'Video Streaming', icon: FaVideo, link: '/products/api/streaming' },
-            { label: 'Video Analytics', icon: FaChartBar, link: '/products/api/analytics' },
-          ],
-        },
-        {
-          title: 'MORE',
-          isMoreColumn: true,
-          items: [
-            { label: 'WordPress', icon: FaWordpress, link: '/more/wordpress' },
-            { label: 'API', icon: FaLink, link: '/more/api' },
-            { label: 'Vimeo Alternative', icon: FaVimeoV, link: '/more/vimeo-alternative' },
-            { label: 'Cloudinary Alternative', icon: FaVimeoV, link: '/more/cloudinary-alternative' },
+            { label: 'Video', subtitle: 'Simplified video hosting', icon: FaPlayCircle, link: '/products/video' },
+            { label: 'Image', subtitle: 'Image optimization', icon: FaImage, link: '/products/image' },
+            { label: 'API', subtitle: 'Developer tools', icon: FaCode, link: '/products/api' },
+            { label: 'WordPress', subtitle: 'WordPress integration', icon: FaWordpress, link: '/products/wordpress' },
+            { label: 'Vimeo Alternative', subtitle: 'Better video hosting', icon: FaVimeoV, link: '/products/vimeo-alternative' },
+            { label: 'Cloudinary Alternative', subtitle: 'Better image hosting', icon: FaCloud, link: '/products/cloudinary-alternative' },
           ],
         },
       ],
@@ -110,19 +74,13 @@ const Navbar: React.FC = () => {
       label: 'Solutions',
       items: [
         {
-          title: 'PROSUMER',
           items: [
-            { label: 'SMB & Startups', icon: FaUsers, link: '/solutions/smb' },
-            { label: 'Fitness Creators', icon: FaRunning, link: '/solutions/fitness' },
-            { label: 'Course Creators', icon: FaGraduationCap, link: '/solutions/courses' },
-          ],
-        },
-        {
-          title: 'ENTERPRISE',
-          items: [
-            { label: 'Online Retail', icon: FaStore, link: '/solutions/retail' },
-            { label: 'News & Media', icon: FaNewspaper, link: '/solutions/media' },
-            { label: 'Consumer Apps', icon: FaMobileAlt, link: '/solutions/apps' },
+            { label: 'SMB & Startups', subtitle: 'For growing businesses', icon: FaUsers, link: '/solutions/smb' },
+            { label: 'Fitness Creators', subtitle: 'For fitness professionals', icon: FaRunning, link: '/solutions/fitness' },
+            { label: 'Course Creators', subtitle: 'For educators', icon: FaGraduationCap, link: '/solutions/courses' },
+            { label: 'Online Retail', subtitle: 'For e-commerce', icon: FaStore, link: '/solutions/retail' },
+            { label: 'News & Media', subtitle: 'For publishers', icon: FaNewspaper, link: '/solutions/media' },
+            { label: 'Consumer Apps', subtitle: 'For mobile apps', icon: FaMobileAlt, link: '/solutions/apps' },
           ],
         },
       ],
@@ -176,14 +134,15 @@ const Navbar: React.FC = () => {
                     key={columnIndex}
                     className={`dropdown-column ${column.isMoreColumn ? 'more-column' : ''}`}
                   >
-                    {column.title && <h3>{column.title}</h3>}
                     <ul>
                       {column.items.map((subItem, subIndex) => (
                         <li key={subIndex}>
-                          {subItem.icon && <subItem.icon/>}
                           <a href={subItem.link}>
-                            {subItem.label}
-                            {subItem.subtitle && <span className="dropdown-subtitle">{subItem.subtitle}</span>}
+                            {subItem.icon && <subItem.icon />}
+                            <div>
+                              {subItem.label}
+                              {subItem.subtitle && <span className="dropdown-subtitle">{subItem.subtitle}</span>}
+                            </div>
                           </a>
                         </li>
                       ))}
@@ -196,8 +155,8 @@ const Navbar: React.FC = () => {
         ))}
       </ul>
       <div className="navbar-right">
-        <Link to="/sign-in" className="login-button">Log In</Link> {/* Use Link */}
-        <Link to="/sign-up" className="signup-button">Sign Up</Link> {/* Use Link */}
+        <Link to="/sign-in" className="nav-item-capsule">Log In</Link>
+        <Link to="/sign-up" className="nav-item-capsule">Sign Up</Link>
       </div>
     </nav>
   );

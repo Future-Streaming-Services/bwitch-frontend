@@ -1,0 +1,219 @@
+.landing-page {
+  background-color: white;
+  min-height: 100vh;
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 40px 20px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-video-container {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.start-free-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-free-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Brands Section */
+.brands-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.brands-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.brands-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.brands-carousel::before,
+.brands-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+}
+
+.brands-carousel::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.brands-carousel::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.brands-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 40px;
+}
+
+.brand-logo {
+  flex-shrink: 0;
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.brand-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Sign Up Dialog */
+.signup-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.signup-dialog {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.signup-dialog h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.signup-dialog p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.dialog-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.close-button,
+.signup-button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-button {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.signup-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+.close-button:hover {
+  background-color: #e9ecef;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+} 
