@@ -6,16 +6,18 @@ import LandingPageContent from './components/LandingPageContent'; // Your other 
 import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 import VerificationSentPage from './pages/VerificationSentPage'; 
+import PricingPage from './pages/PricingPage';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        
         <Routes>
           <Route path="/" element={<LandingPageContent />} /> {/* Your main landing page content */}
           <Route path="/sign-up" element={<SignUpPage />} />
           <Route path="/sign-in" element={<SignInPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
           <Route path="/verification-sent" element={<VerificationSentPage />} /> {/* Route for verification page */}
         </Routes>
       </div>

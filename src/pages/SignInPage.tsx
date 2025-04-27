@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AuthPage.css';
 import { FaGoogle } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const SignInPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -19,6 +19,9 @@ const SignInPage: React.FC = () => {
   return (
     <div className="auth-page">
       <div className="form-section sign-in-form">
+        <Link to="/" className="auth-logo-link">
+          <img src="/src/assets/icon/icon-long.png" alt="Logo" className="auth-logo" />
+        </Link>
         <h2 className="title-text">Glad to see you back!</h2>
         <div className="text-field">
           <label htmlFor="email">Email</label>

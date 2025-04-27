@@ -12,56 +12,62 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-  }
+    box-sizing: border-box;
+}
   
-  .navbar-left .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #007bff;
-  }
+.navbar-left .logo {
+    display: block;
+    text-decoration: none;
+}
+
+.nav-logo {
+    width: 180px;
+    height: auto;
+    display: block;
+}
   
-  .navbar-center {
+.navbar-center {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-  }
+}
   
-  .navbar-center .nav-item {
+.navbar-center .nav-item {
     position: relative;
     margin: 0 10px;
-  }
+}
   
-  .navbar-center .nav-item-capsule {
+.navbar-center .nav-item-capsule {
     border-radius: 20px;
     padding: 8px 15px;
     transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
-  }
+}
   
-  .navbar-center .nav-item-capsule > a,
-  .navbar-center .nav-item-capsule > span {
+.navbar-center .nav-item-capsule > a,
+.navbar-center .nav-item-capsule > span {
     text-decoration: none;
     color: #333;
     font-weight: 500;
     display: block;
-  }
+}
   
-  .navbar-center .nav-item:hover .nav-item-capsule {
+.navbar-center .nav-item:hover .nav-item-capsule {
     background-color: #007bff;
     color: white;
-  }
+}
   
-  .navbar-center .nav-item:hover .nav-item-capsule > a,
-  .navbar-center .nav-item:hover .nav-item-capsule > span {
+.navbar-center .nav-item:hover .nav-item-capsule > a,
+.navbar-center .nav-item:hover .nav-item-capsule > span {
     color: white;
-  }
+}
   
-  .navbar-center .nav-item.active .nav-item-capsule {
+.navbar-center .nav-item.active .nav-item-capsule {
     background-color: #007bff;
     color: white;
-  }
+}
   
-  .navbar-center .nav-item .dropdown-sheet {
+.navbar-center .nav-item .dropdown-sheet {
     position: absolute;
     top: 100%;
     left: 50%;
@@ -73,22 +79,22 @@
     padding: 20px;
     z-index: 10;
     white-space: nowrap;
-  }
+}
   
-  .navbar-center .nav-item .dropdown-sheet ul {
+.navbar-center .nav-item .dropdown-sheet ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
-  }
+}
   
-  .navbar-center .nav-item .dropdown-sheet ul li {
+.navbar-center .nav-item .dropdown-sheet ul li {
     margin-bottom: 0;
-  }
+}
   
-  .navbar-center .nav-item .dropdown-sheet ul li a {
+.navbar-center .nav-item .dropdown-sheet ul li a {
     text-decoration: none;
     color: #333;
     display: flex;
@@ -97,56 +103,56 @@
     padding: 8px 15px;
     border-radius: 8px;
     transition: all 0.2s ease;
-  }
+}
   
-  .navbar-center .nav-item .dropdown-sheet ul li a:hover {
+.navbar-center .nav-item .dropdown-sheet ul li a:hover {
     background-color: #f5f5f5;
-  }
+}
   
-  .navbar-center .nav-item .dropdown-sheet ul li a .dropdown-subtitle {
+.navbar-center .nav-item .dropdown-sheet ul li a .dropdown-subtitle {
     display: block;
     font-size: 0.85rem;
     color: #666;
     margin-top: 2px;
-  }
+}
   
-  .navbar-center .nav-item .dropdown-sheet ul li a svg {
+.navbar-center .nav-item .dropdown-sheet ul li a svg {
     font-size: 1.2rem;
     color: #007bff;
     flex-shrink: 0;
-  }
+}
   
-  /* Style the right side buttons to look like tabs */
-  .navbar-right {
+/* Style the right side buttons to look like tabs */
+.navbar-right {
     display: flex;
     padding: 8px 12px;
     gap: 10px;
-  }
+}
   
-  .navbar-right .nav-item-capsule {
+.navbar-right .nav-item-capsule {
     padding: 8px 15px;
     border-radius: 20px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-  }
+}
   
-  .navbar-right .nav-item-capsule[href="/sign-in"] {
+.navbar-right .nav-item-capsule[href="/sign-in"] {
     color: #333;
     border: 1px solid #e0e0e0;
-  }
+}
   
-  .navbar-right .nav-item-capsule[href="/sign-up"] {
+.navbar-right .nav-item-capsule[href="/sign-up"] {
     background-color: #007bff;
     color: white;
     border: 1px solid #007bff;
-  }
+}
   
-  .navbar-right .nav-item-capsule[href="/sign-in"]:hover {
+.navbar-right .nav-item-capsule[href="/sign-in"]:hover {
     background-color: #f5f5f5;
-  }
+}
   
-  .navbar-right .nav-item-capsule[href="/sign-up"]:hover {
+.navbar-right .nav-item-capsule[href="/sign-up"]:hover {
     background-color: #0056b3;
     border-color: #0056b3;
-  }
+}

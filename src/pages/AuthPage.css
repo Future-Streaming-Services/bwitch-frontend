@@ -6,13 +6,25 @@
     overflow: hidden;
 }
   
+.auth-logo-link {
+    display: block;
+    margin-bottom: 40px;
+    margin-top: -20px;
+}
+  
+.auth-logo {
+    width: 180px;
+    height: auto;
+}
+  
 .form-section {
     width: 33.33%; /* Occupy one-third of the width */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 40px;
     background-color: #ffffff;
+    padding-top: 40px;
 }
   
 .sign-up-form,
@@ -147,16 +159,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
 .auth-video {
     width: 100%;
-    height: calc(100vh - 80px);
-    max-height: 80vh;
+    height: calc(100vh - 40px);
+    max-height: 90vh;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 

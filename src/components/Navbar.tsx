@@ -110,7 +110,9 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <div className="logo">Your Logo</div>
+        <Link to="/" className="logo">
+          <img src="/src/assets/icon/icon-long.png" alt="Logo" className="nav-logo" />
+        </Link>
       </div>
       <ul className="navbar-center">
         {navItems.map((item, index) => (
@@ -122,7 +124,7 @@ const Navbar: React.FC = () => {
           >
             <div className="nav-item-capsule">
               {item.link ? (
-                <a href={item.link}>{item.label}</a>
+                <Link to={item.link}>{item.label}</Link>
               ) : (
                 <span>{item.label}</span>
               )}
