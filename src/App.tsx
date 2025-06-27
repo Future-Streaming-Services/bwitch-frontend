@@ -7,6 +7,7 @@ import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 import VerificationSentPage from './pages/VerificationSentPage'; 
 import PricingPage from './pages/PricingPage';
+import Docs from './pages/Docs';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/verification-sent" element={<VerificationSentPage />} /> {/* Route for verification page */}
+          <Route path="/docs" element={<Docs />} />
         </Routes>
       </div>
     </Router>
